@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.css" />
+		<title>管理页面</title>
+	</head>
+	<style type="text/css">
+		html,
+		body {
+			background-color: #eee;
+		}
+		
+		header {
+			line-height: 2.5rem;
+			height: 2.5rem;
+			padding: 0.53rem 2%;
+			position: relative;
+			border-bottom: 1px solid hsl(0, 0%, 88%);
+			background-color: white;
+		}
+		
+		header img {
+			height: 2.50rem;
+			left: 2%;
+			position: absolute;
+		}
+		
+		header a {
+			display: block;
+			height: 100%;
+			text-indent: 2.8rem;
+			color: deepskyblue;
+		}
+		
+		.toolbar {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			margin: 0 auto;
+			background-color: #fbfbfb;
+			left: 0;
+			color: hsl(0, 0%, 34%);
+		}
+		
+		.toolbar a {
+			display: block;
+            line-height: 3.8rem;
+			font-size: 1.07rem;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			box-shadow: 0px -1px 0 0 hsl(0, 0%, 88%);
+			box-sizing: border-box;
+			padding: 0 2%;
+			position: relative;
+			transition: .25s all;
+			-webkit-transition: .25s all;
+		}
+		
+		.toolbar a img {
+			position: absolute;
+			right: 4%;
+			height: 1.2rem;
+			top: 50%;
+			margin-top: -0.6rem;
+		}
+		
+		.toolbar strong {
+			top: 0;
+			display: inline-block;
+			height: 100%;
+			line-height: 3.56rem;
+			font-size: 1rem;
+			text-align: center;
+			color: white;
+			z-index: 100;
+			-webkit-transition: right .5s ease;
+		}
+		
+		.del {
+			right: -28%;
+			background-color: red;
+			width: 14%;
+		}
+		
+		.edit {
+			background-color: #ccc;
+			right: -14%;
+			width: 14%;
+		}
+		
+		.drop {
+			right: -28%;
+			background-color: red;
+			width: 14%;
+		}
+
+	</style>
+
+	<body>
+		<div class="toolbar toolbar_mine" style="margin-bottom: 2rem;">
+			<a class="clearfix" 足球协会(5) </a>
+			<a class="clearfix">深圳大学(5) </a>
+		</div>
+
+		<div class="toolbar toolbar_other">
+			<a class="clearfix">足球协会(5)  </a>
+			<a class="clearfix">深圳大学(5) </a>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="jQuery-swiper.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+		
+			$(".toolbar a").swipe({
+				deleteBtn: {
+					content: "删除",
+					isPreventDefault: true,
+					backgroundColor: "red",
+					width: "20%",
+					clickFun: function() {
+						console.info("delete click")
+					}
+				},
+				shareBtn: {
+					content: "分享",
+					isPreventDefault: true,
+					backgroundColor: "#ccc",
+					width: "25%",
+					clickFun: function() {
+						console.info("share click")
+					}
+				}
+			});
+			$(".toolbar a").on("click", function() {
+					console.info("container click");
+				})
+				/*//点击事件
+				$(".edit").on("click",function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					//分享
+					alert(0)
+				});
+				$(".del").on("click",function(e){
+					//解散
+					e.preventDefault();
+					e.stopPropagation();
+					e.preventDefault(); 
+					e.stopPropagation();
+					$.confirm("确认解散群？", function() {
+					  //点击确认后的回调函数
+					  }, function() {
+					  //点击取消后的回调函数
+					});
+					
+				});
+				$(".drop").on("click",function(e){
+					//退出
+					e.preventDefault();
+					e.stopPropagation();
+					$.confirm("确定退出群？", function() {
+					  //点击确认后的回调函数
+					  }, function() {
+					  //点击取消后的回调函数
+					});
+				});
+				$(".toolbar a").on("click",function(e){
+					//
+					e.preventDefault();
+					e.stopPropagation();
+					alert(3)
+				});
+				$("header").on("click",function(e){
+					//
+					e.preventDefault();
+					e.stopPropagation();
+					alert(4);
+				});*/
+
+			//			var i = 1;
+			//			console.log(i++);
+			//			console.log(++i)
+
+		</script>
+	</body>
+
+</html>
